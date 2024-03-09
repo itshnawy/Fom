@@ -24,6 +24,7 @@ button.mmbtn {
     all: unset;
     background: #fff;
     padding: 10px 15px;
+    font-size: 19px;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
@@ -38,5 +39,6 @@ div#row {
 }
 h1.title {
     color: #fff;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
+    cursor: default;
 }
