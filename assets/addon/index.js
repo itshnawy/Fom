@@ -5,7 +5,7 @@ script.type = "module"
 document.head.appendChild(script);
 
 
-function mdModal(src) {
+function mdModal(src,dir = "ltr") {
     // Create modal container
     const modalContainer = document.createElement("div");
     modalContainer.classList.add("mdModal");
@@ -13,7 +13,7 @@ function mdModal(src) {
     // Modal content
     modalContainer.innerHTML = `
         <button id="close-btn">✖</button>
-        <zero-md id="mdContainer" src="${src}">
+        <zero-md id="mdContainer" src="${src}" dir="${dir}">
             <template>
                 <link rel="stylesheet" href="/assets/addon/md.css" />
                 <link rel="stylesheet" href="/assets/addon/hili.css" />

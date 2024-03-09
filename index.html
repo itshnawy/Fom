@@ -10,7 +10,10 @@
 <body>
     <div id="row">
         <h1 class="title">Simply tap the button to preview!</h1>
-        <button class="mmbtn preview" onclick="mdModal('./assets/theMd.md')">Preview</button>
+        <div id="button-container">
+            <button class="mmbtn preview" onclick="mdModal('./assets/page.md')">LTR</button>
+            <button class="mmbtn preview" onclick="mdModal('./assets/page-rtl.md', 'rtl')">RTL</button>
+        </div>
     </div>
     <script src="/assets/addon/index.js"></script>
 </body>
