@@ -21,7 +21,7 @@ mdModal('ReadMe.md')
 
 For RTL (right-to-left) languages:
 
-```html
+```javascript
 mdModal('ReadMe.md','rtl')
 ```
 
