@@ -17,7 +17,7 @@ function mdModal(
     document.body.innerHTML += `<style>.mdModal {background: ${bg !== "#000" && bg !== "#000000" ? bg : "#fff"}; } </style>`
     // Modal content
     modalContainer.innerHTML = `
-    <button id="close-btn">✖ </button><h1 class="modalheader">${header}</h1>
+    <button id="close-btn" title="Close Button">✖</button><h1 class="modalheader">${header}</h1>
     <zero-md id="mdContainer" src="${src}" dir="${dir}">
             <template>
                 <link rel="stylesheet" href="/assets/addon/md.css" />
