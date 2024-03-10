@@ -14,7 +14,7 @@ function mdModal(
     // Create modal container
     const modalContainer = document.createElement("div");
     modalContainer.classList.add("mdModal");
-    document.body.innerHTML += `<style>.mdModal {background: ${bg !== "#000" && bg !== "#000000" ? bg : "#fff"}; } </style>`
+    document.body.innerHTML += `<style id="mdStyle">.mdModal {background: ${bg !== "#000" && bg !== "#000000" ? bg : "#fff"}; } </style>`
     // Modal content
     modalContainer.innerHTML = `
     <button id="close-btn" title="Close Button">✖</button><h1 class="modalheader">${header}</h1>
@@ -34,9 +34,8 @@ function mdModal(
     // Event listener for closing the modal
     const closeButton = modalContainer.querySelector("#close-btn");
     closeButton.addEventListener("click", function() {
-        // Enable scrolling on the body
         document.body.style.overflow = "auto";
-        // Remove the modal from the DOM
+        document.getElementById("mdStyle").remove();
         modalContainer.remove();
     });
 }
