@@ -20,3 +20,7 @@
     overflow-y: scroll;
     height: 80%;
 }
+.modalheader {
+  text-align: center;
+  text-transform: capitalize;
+}

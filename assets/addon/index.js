@@ -5,22 +5,20 @@ script.type = "module"
 document.head.appendChild(script);
 
 
-function mdModal(src,dir = "ltr") {
+function mdModal(src,dir = "ltr",header = "") {
     // Create modal container
     const modalContainer = document.createElement("div");
     modalContainer.classList.add("mdModal");
-
     // Modal content
     modalContainer.innerHTML = `
-        <button id="close-btn">✖</button>
-        <zero-md id="mdContainer" src="${src}" dir="${dir}">
+    <button id="close-btn">✖ </button><h1 class="modalheader">${header}</h1>
+    <zero-md id="mdContainer" src="${src}" dir="${dir}">
             <template>
                 <link rel="stylesheet" href="/assets/addon/md.css" />
                 <link rel="stylesheet" href="/assets/addon/hili.css" />
             </template>
-        </zero-md>
-    `;
-
+        </zero-md>`;
+        
     // Append modal container to the body
     document.body.appendChild(modalContainer);
 

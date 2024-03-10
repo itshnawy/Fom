@@ -31,4 +31,12 @@ mdModal('ReadMe.md','rtl')
 <button class="btn" onclick="mdModal('ReadMe.md')">Example</button>
 ```
 
+### Header 
+
+If you want to add a header to the modal, include the 'header' parameter in the function:
+
+```javascript
+mdModal('ReadMe.md','ltr','The Title')
+```
+
 That's all there is to it! With mdModal, displaying Markdown content in a modal has never been easier.
