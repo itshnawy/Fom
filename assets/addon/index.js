@@ -5,10 +5,16 @@ script.type = "module"
 document.head.appendChild(script);
 
 
-function mdModal(src,dir = "ltr",header = "") {
+function mdModal(
+    src,
+    dir = "ltr",
+    header = "",
+    bg = "#fff",
+    ) {
     // Create modal container
     const modalContainer = document.createElement("div");
     modalContainer.classList.add("mdModal");
+    document.body.innerHTML += `<style>.mdModal {background: ${bg !== "#000" && bg !== "#000000" ? bg : "#fff"}; } </style>`
     // Modal content
     modalContainer.innerHTML = `
     <button id="close-btn">✖ </button><h1 class="modalheader">${header}</h1>

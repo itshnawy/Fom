@@ -13,7 +13,14 @@
         <div id="button-container">
             <button class="mmbtn preview" onclick="mdModal('./assets/page.md')">LTR</button>
             <button class="mmbtn preview" onclick="mdModal('./assets/page-rtl.md', 'rtl')">RTL</button>
-            <button class="mmbtn preview" onclick="mdModal('./assets/page.md','ltr','header')">Header</button>
+            <button class="mmbtn preview" onclick="
+            mdModal(
+                src = './assets/page.md',
+                dir = 'ltr',
+                header = 'Title',
+                bg = '#123456'
+                )">
+                Header</button>
         </div>
     </div>
     <script src="/assets/addon/index.js"></script>
