@@ -32,20 +32,20 @@ Customization features on the modal
 
 To change the dirction of the modal, you need to add dir parameter, like this:
 
-> default: ltr
+> default: LTR
 
 ```javascript
-mdModal(src = 'ReadMe.md', dir = 'ltr')
+mdModal(src = 'ReadMe.md', dir = 'LTR')
 ```
 
 #### Header 
 
 If you want to add a header to the modal, include the 'header' parameter in the function:
 
-> default: none
+> default: NONE
 
 ```javascript
-mdModal(src = 'ReadMe.md', dir = 'ltr', header ='The Title')
+mdModal(src = 'ReadMe.md', dir = 'LTR', header ='The Title')
 ```
 
 #### Background 
@@ -55,15 +55,15 @@ If you want to add a header to the modal, include the 'bg' parameter in the func
 > default: White Color
 
 ```javascript
-mdModal(src = 'ReadMe.md', dir = 'ltr', header ='The Title', bg = '#fff')
+mdModal(src = 'ReadMe.md', dir = 'LTR', header ='The Title', bg = '#fff')
 ```
 
 #### Font 
 
 If you want to customize markdown font on the modal , include the 'fontSrc' parameter in the function to set the font link and include the 'fontName' parameter in the function to set the font name, example: 
 
-> default: the default font is tajawal
+> default: The Default Font Is Tajawal
 
 ```javascript
-mdModal(src = 'ReadMe.md', dir = 'ltr', header ='The Title', bg = '#fff', fontSrc = './assets/addon/fonts.css', fontName = 'Tajawal')
+mdModal(src = 'ReadMe.md', dir = 'LTR', header ='The Title', bg = '#fff', fontSrc = '{FONT-LINK}', fontName = '{FONT-NAME}')
 ```
