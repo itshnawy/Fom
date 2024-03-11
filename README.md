@@ -8,36 +8,62 @@ Special thanks to [Zerodevx](https://github.com/zerodevx) for creating the repos
 
 ## How to Use
 
+
+Add the CDN to Your Website :
+```
+https://cdn.jsdelivr.net/gh/itshnawy/mdModal/dist/mdModal.min.js
+```
+
+
 To utilize mdModal, follow these simple steps:
 
 1. Obtain the Markdown file you wish to display, for example, a file named `ReadMe.md`.
 2. Incorporate the Markdown file into the function as shown below, specifying the language direction if necessary:
 
-For LTR (left-to-right) languages (default direction):
-
 ```javascript
 mdModal('ReadMe.md')
 ```
 
-For RTL (right-to-left) languages:
+### Customization
+
+Customization features on the modal
+
+#### Dirction
+
+To change the dirction of the modal, you need to add dir parameter, like this:
+
+> default: ltr
 
 ```javascript
-mdModal('ReadMe.md','rtl')
+mdModal(src = 'ReadMe.md', dir = 'ltr')
 ```
 
-3. You can attach the modal functionality to any element within your HTML document. For instance:
-
-```html
-<button class="btn" onclick="mdModal('ReadMe.md')">Example</button>
-```
-
-### Header 
+#### Header 
 
 If you want to add a header to the modal, include the 'header' parameter in the function:
 
-```javascript
-mdModal('ReadMe.md','ltr','The Title')
-```
-### font customization 
+> default: none
 
-That's all there is to it! With mdModal, displaying Markdown content in a modal has never been easier.
+```javascript
+mdModal(src = 'ReadMe.md', dir = 'ltr', header ='The Title')
+```
+
+#### Background 
+
+If you want to add a header to the modal, include the 'bg' parameter in the function:
+
+> default: White Color
+
+```javascript
+mdModal(src = 'ReadMe.md', dir = 'ltr', header ='The Title', bg = '#fff')
+```
+
+#### Font 
+
+If you want to customize markdown font on the modal , include the 'fontSrc' parameter in the function to set the font link and include the 'fontName' parameter in the function to set the font name, example: 
+
+> default: the default font is tajawal
+
+```javascript
+mdModal(src = 'ReadMe.md', dir = 'ltr', header ='The Title', bg = '#fff', fontSrc = './assets/addon/fonts.css', fontName = 'Tajawal')
+```
