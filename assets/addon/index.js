@@ -20,7 +20,7 @@ function mdModal(
 
     const style = document.createElement("style");
     style.id = "mdStyle";
-    style.innerHTML = `.mdModal {background: ${bg};}`;
+    style.innerHTML = `@import url('./assets/addon/modal.css');.mdModal {background: ${bg};}`;
     document.head.appendChild(style);
 
     // Modal content
@@ -31,12 +31,7 @@ function mdModal(
             <template>
                 <link id="mainmdstyle" rel="stylesheet" href="${bg === "#000" || bg === "#000000" ? '/assets/addon/md-dark.css' : '/assets/addon/md.css'}" />
                 <link rel="stylesheet" href="/assets/addon/hili.css" />
-                <style>
-    @import url('${fontSrc}');
-    * {
-        font-family: "${fontName}";
-    }
-    </style>
+                <style>@import url('${fontSrc}');*{font-family: "${fontName}";}</style>
             </template>
         </zero-md>`;
     // Append modal container to the body
