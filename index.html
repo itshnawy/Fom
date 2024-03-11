@@ -11,14 +11,33 @@
     <div id="row">
         <h1 class="title">Simply tap the button to preview!</h1>
         <div id="button-container">
-            <button class="mmbtn preview" onclick="mdModal('./assets/page.md')">LTR</button>
-            <button class="mmbtn preview" onclick="mdModal('./assets/page-rtl.md', 'rtl')">RTL</button>
+            <button class="mmbtn preview" onclick="mdModal(
+                src = './assets/page.md',
+                dir = 'ltr',
+                header = '',
+                bg = '#fff',
+                fontSrc = './assets/addon/fonts.css',
+                fontName = 'Tajawal'
+                )">LTR</button>
+
+            <button class="mmbtn preview" onclick="
+            mdModal(
+                src = './assets/page-rtl.md',
+                dir = 'rtl',
+                header = '',
+                bg = '#fff',
+                fontSrc = './assets/addon/fonts.css',
+                fontName = 'Tajawal'
+            )">RTL</button>
+
             <button class="mmbtn preview" onclick="
             mdModal(
                 src = './assets/page.md',
                 dir = 'ltr',
                 header = 'Title',
-                bg = '#fff'
+                bg = '#fff',
+                fontSrc = './assets/addon/fonts.css',
+                fontName = 'Tajawal'
                 )">
                 Header</button>
         </div>

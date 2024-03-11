@@ -9,12 +9,16 @@ function mdModal(
     src,
     dir = "ltr",
     header = "",
-    bg = "#fff",
+    bg = "#ffffff",
+    fontSrc = "./assets/addon/fonts.css",
+    fontName = "Tajawal",
     ) {
     // Create modal container
     const modalContainer = document.createElement("div");
     modalContainer.classList.add("mdModal");
-    document.body.innerHTML += `<style id="mdStyle">.mdModal {background: ${bg !== "#000" && bg !== "#000000" ? bg : "#fff"}; } </style>`
+    document.head.innerHTML += `<style id="mdStyle">
+.mdModal {background: ${bg !== "#000" && bg !== "#000000" ? bg : "#fff"}; }
+    </style>`
     // Modal content
     modalContainer.innerHTML = `
     <button id="close-btn" title="Close Button">✖</button><h1 class="modalheader">${header}</h1>
@@ -22,6 +26,12 @@ function mdModal(
             <template>
                 <link rel="stylesheet" href="/assets/addon/md.css" />
                 <link rel="stylesheet" href="/assets/addon/hili.css" />
+                <style id="mdStyle">
+    @import url('${fontSrc}');
+    * {
+        font-family: "${fontName}";
+    }
+    </style>
             </template>
         </zero-md>`;
         

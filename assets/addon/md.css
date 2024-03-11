@@ -1,11 +1,4 @@
-@import url('/assets/addon/fonts.css');
-body {
-    font-family: "tajawal";
-}
-* {
-        font-family: "tajawal";
 
-}
 .markdown-body .octicon {
     display: inline-block;
     fill: currentColor;

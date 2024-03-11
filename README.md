@@ -38,5 +38,6 @@ If you want to add a header to the modal, include the 'header' parameter in the 
 ```javascript
 mdModal('ReadMe.md','ltr','The Title')
 ```
+### font customization 
 
 That's all there is to it! With mdModal, displaying Markdown content in a modal has never been easier.
