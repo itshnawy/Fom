@@ -1,6 +1,6 @@
 // Append CDN
 var script = document.createElement('script');
-script.src = 'https://cdn.jsdelivr.net/gh/zerodevx/zero-md/src/index.js';
+script.src = 'https://mdmodal.vercel.app/assets/addon/zero-md.min.js';
 script.type = "module"
 document.head.appendChild(script);
 
