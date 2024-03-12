@@ -1,6 +1,6 @@
 // Append CDN
 var script = document.createElement('script');
-script.src = 'https://mdmodal.vercel.app/addon/zero-md.min.js';
+script.src = 'https://mdmodal.vercel.app/assets/addon/zero-md.min.js';
 script.type = "module"
 document.head.appendChild(script);
 
@@ -10,7 +10,7 @@ function mdModal(
     dir = "ltr",
     header = "",
     bg = "#ffffff",
-    fontSrc = "https://mdmodal.vercel.app/addon/fonts.css",
+    fontSrc = "https://mdmodal.vercel.app/assets/addon/fonts.css",
     fontName = "Tajawal",
     ) {
     // Create modal container
@@ -20,7 +20,7 @@ function mdModal(
 
     const style = document.createElement("style");
     style.id = "mdStyle";
-    style.innerHTML = `@import url('https://mdmodal.vercel.app/addon/modal.css');.mdModal {background: ${bg};}`;
+    style.innerHTML = `@import url('https://mdmodal.vercel.app/assets/addon/modal.css');.mdModal {background: ${bg};}`;
     document.head.appendChild(style);
 
     // Modal content
