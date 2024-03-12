@@ -11,7 +11,7 @@ Special thanks to [Zerodevx](https://github.com/zerodevx) for creating the repos
 
 Add the CDN to Your Website :
 ```
-https://cdn.jsdelivr.net/gh/itshnawy/mdModal/dist/mdModal.min.js
+https://mdmodal.vercel.app/dist/mdModal.min.js
 ```
 
 
