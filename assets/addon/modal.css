@@ -28,7 +28,14 @@
   text-align: center;
   text-transform: capitalize;
 }
-
+div#overlay {
+  width: 100%;
+  background: #0000008c;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  cursor: pointer;
+}
 @media (max-width: 576px) {
   .mdModal {
       max-width: 250px;

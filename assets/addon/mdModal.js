@@ -13,6 +13,10 @@ function mdModal(
     fontSrc = "./assets/addon/fonts.css",
     fontName = "Tajawal",
     ) {
+        let overlay = document.createElement('div');
+        overlay.id = 'overlay';
+        document.body.appendChild(overlay)
+    
     // Create modal container
     const modalContainer = document.createElement("div");
     modalContainer.classList.add("mdModal");
@@ -41,19 +45,20 @@ function mdModal(
     document.body.style.overflow = "hidden";
 
     // Event listener for closing the modal
-    const closeButton = modalContainer.querySelector("#close-btn");
-    if (closeButton) {  
-    closeButton.addEventListener("click", function() {
 
+    function colsefn() {
         document.body.style.overflow = "auto";
         const mdStyle = document.getElementById("mdStyle");
         if (mdStyle) mdStyle.remove();
         modalContainer.remove();
-    })
-} else {
-    console.error("Close button not found.");
-};
+        overlay.remove();
+    }
 
+    const closeButton = modalContainer.querySelector("#close-btn");
+    const ov = document.getElementById('overlay');
+    closeButton.addEventListener("click", colsefn)
+    ov.addEventListener('click', colsefn)
 
 
 }
+
