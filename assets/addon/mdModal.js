@@ -27,7 +27,7 @@ function mdModal(
     modalContainer.innerHTML = `
     <button id="close-btn" title="Close Button" style="color:${bg === "#000" || bg === "#000000" ? '#fff' : '#000'}">✖</button>
     <h1 class="modalheader" style="color:${bg === "#000" || bg === "#000000" ? '#fff' : '#000'}">${header}</h1>
-    <zero-md id="mdContainer" src="${src}" dir="${dir}">
+    <zero-md id="mdContainer" class="${header !== "" ? 'h' : ''}" src="${src}" dir="${dir}">
             <template>
                 <link id="mainmdstyle" rel="stylesheet" href="${bg === "#000" || bg === "#000000" ? '/assets/addon/md-dark.css' : '/assets/addon/md.css'}" />
                 <link rel="stylesheet" href="/assets/addon/hili.css" />
