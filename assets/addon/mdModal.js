@@ -1,6 +1,6 @@
 // Append CDN
 var script = document.createElement('script');
-script.src = './assets/addon/zero-md.min.js';
+script.src = `./assets/addon/zero-md.min.js`;
 script.type = "module"
 document.head.appendChild(script);
 
@@ -10,7 +10,7 @@ function mdModal(
     dir = "ltr",
     header = "",
     bg = "#ffffff",
-    fontSrc = "./assets/addon/fonts.css",
+    fontSrc = `./assets/addon/fonts.css`,
     fontName = "Tajawal",
     ) {
         let overlay = document.createElement('div');
@@ -29,17 +29,28 @@ function mdModal(
 
     // Modal content
     modalContainer.innerHTML = `
-    <button id="close-btn" title="Close Button" style="color:${bg === "#000" || bg === "#000000" ? '#fff' : '#000'}">✖</button>
+    <button id="close-btn" title="Close Button" style="color:${bg === "#000" || bg === "#000000" ? '#fff' : '#000'}">&times;</button>
     <h1 class="modalheader" style="color:${bg === "#000" || bg === "#000000" ? '#fff' : '#000'}">${header}</h1>
     <zero-md id="mdContainer" class="${header !== "" ? 'h' : ''}" src="${src}" dir="${dir}">
             <template>
-                <link id="mainmdstyle" rel="stylesheet" href="${bg === "#000" || bg === "#000000" ? '/assets/addon/md-dark.css' : '/assets/addon/md.css'}" />
-                <link rel="stylesheet" href="/assets/addon/hili.css" />
+                <link id="mainmdstyle" rel="stylesheet" href="${bg === "#000" || bg === "#000000" ? './assets/addon/md-dark.css' : './assets/addon/md.css'}" />
+                <link rel="stylesheet" href="./assets/addon/hili.css" />
                 <style>@import url('${fontSrc}');*{font-family: "${fontName}";}</style>
             </template>
         </zero-md>`;
     // Append modal container to the body
-    document.body.appendChild(modalContainer);
+    const modalOpening = [
+        { transform: "scale(0)" },
+        { transform: "scale(1)" },
+      ];
+      
+      const modalOpeningTiming = {
+        duration: 200,
+        iterations: 1,
+      };
+      
+        document.body.appendChild(modalContainer);
+        modalContainer.animate(modalOpening, modalOpeningTiming)
 
     // Disable scrolling on the body
     document.body.style.overflow = "hidden";
