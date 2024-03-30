@@ -1,51 +1,54 @@
+/*Model Container*/
 .mdModal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  max-width: 600px;
-  transition: opacity 0.5s ease-in-out;
-  border-radius: 5px;
-  padding: 15px;
-  box-shadow: 0px 10px 26px -2px rgba(0, 0, 0, 0.2);
-  width: 80%;
-  height: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    max-width: 600px;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0px 10px 26px -2px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    height: 600px;
   }
   #close-btn {
     all: unset;
     cursor: pointer;
     font-size: 21px;
     font-weight: bolder;
-}
+  }
   #mdContainer {
     padding: 31px;
     overflow-y: scroll;
     height: 80%;
-}
-#mdContainer.h {
-  height: 75%;
-}
-.modalheader {
-  text-align: center;
-  text-transform: capitalize;
-}
-div#overlay {
-  width: 100%;
-  background: #0000008c;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  cursor: pointer;
-}
+  }
+  #mdContainer.h {
+    height: 75%;
+  }
+  .modalheader {
+    text-align: center;
+    text-transform: capitalize;
+  }
+/*Overlay*/
+  div#overlay {
+    width: 100%;
+    background: #0000008c;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    cursor: pointer;
+  }
+/*Media Query*/
 @media (max-width: 576px) {
   .mdModal {
-      max-width: 250px;
+    max-width: 250px;
   }
-  }
+}
 
 @media (min-width: 576px) {
-.mdModal {
+  .mdModal {
     max-width: 500px;
-}
+  }
 }
