@@ -45,7 +45,7 @@ function mdModal(
       ];
       
       const modalOpeningTiming = {
-        duration: 200,
+        duration: 210,
         iterations: 1,
       };
       
@@ -58,11 +58,24 @@ function mdModal(
     // Event listener for closing the modal
 
     function colsefn() {
-        document.body.style.overflow = "auto";
-        const mdStyle = document.getElementById("mdStyle");
-        if (mdStyle) mdStyle.remove();
-        modalContainer.remove();
-        overlay.remove();
+        const modalClosing = [
+            { transform: "scale(1)" },
+            { transform: "scale(0)" },
+          ];
+          
+          const modalClosingTiming = {
+            duration: 210,
+            iterations: 1,
+          };
+
+    var animation = modalContainer.animate(modalClosing, modalClosingTiming);
+    animation.onfinish= function(){
+    document.body.style.overflow = "auto";
+    const mdStyle = document.getElementById("mdStyle");
+    if (mdStyle) mdStyle.remove();
+    modalContainer.remove();
+    overlay.remove();
+}
     }
 
     const closeButton = modalContainer.querySelector("#close-btn");
