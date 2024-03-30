@@ -15,6 +15,15 @@ function mdModal(
   fontName = "Tajawal",
     ) {
 
+    // Parameter Validation
+    if (typeof src !== 'string' || src.trim() === '' || typeof fontSrc !== 'string'|| fontSrc.trim() === '') {
+      throw new Error('src or fontSrc parameter must be a non-empty string.');
+    }
+
+    if (!['ltr', 'rtl'].includes(dir)) {
+      throw new Error('Invalid dir parameter. Valid values are "ltr" or "rtl".');
+    }
+
     // vars
     let overlay = document.createElement('div');
     const modalContainer = document.createElement("div");
@@ -63,7 +72,7 @@ function mdModal(
 
     // closing modal Function
 
-    function colsefn() {
+    function colseFn() {
       const modalClosing = [
         { transform: "scale(1)" },
         { transform: "scale(0)" },
@@ -85,7 +94,7 @@ function mdModal(
       }
     // closing
     const closeButton = modalContainer.querySelector("#close-btn");
-    closeButton.addEventListener("click", colsefn)
-    overlay.addEventListener('click', colsefn)
+    closeButton.addEventListener("click", colseFn)
+    overlay.addEventListener('click', colseFn)
 }
 
