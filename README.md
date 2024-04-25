@@ -13,6 +13,7 @@ To use mdModal in your project, you can include it via a CDN or install it using
 
 ```
 <script src="https://cdn.jsdelivr.net/npm/mdModal/mdModal.js"></script>
+
 ```
 
 ### NPM
@@ -37,6 +38,7 @@ Customization features on the modal
 
 ### language
 
+if you want to change the language direction
 
 > default: ar
 
@@ -46,6 +48,7 @@ mdModal.currentLanguage = "en" // dir = ltr
 
 ### Background 
 
+if you want to change The background of the Modal
 
 > default: #fff
 
@@ -55,11 +58,13 @@ mdModal.currentColor = "#000" // background will be black and it'll use dark mod
 
 ### Modal Style 
 
+if you want to change The Style of the Modal
+
 
 > default: mdModal Style file
 
 ```javascript
-mdModal.style = "/css/style.css" will replace the design of md modal
+mdModal.style = "/css/style.css" // will replace the design of md modal
 ```
 
 ### Header 
