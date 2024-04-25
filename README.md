@@ -18,7 +18,7 @@ To use mdModal in your project, you can include it via a CDN or install it using
 ### NPM
 
 ```
-npm i mdModal
+npm i mdmodal
 ```
 
 
