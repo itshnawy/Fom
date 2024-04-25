@@ -1,4 +1,9 @@
-# mdModal
+<div style="text-align:center;">
+<h1>mdModal</h1> 
+<img alt="NPM Version" src="https://img.shields.io/npm/v/mdmodal?style=flat&logo=NPM"> 
+  
+<img alt="NPM Downloads" src="https://img.shields.io/npm/dy/mdmodal?style=flat&logo=npm">
+</div>
 
 mdModal is a library that provides modal functionality using Markdown to display content.
 
