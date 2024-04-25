@@ -4,7 +4,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
     max-width: 600px;
     transition: opacity 0.5s ease-in-out;
     border-radius: 5px;
@@ -24,13 +23,20 @@
     overflow-y: scroll;
     height: 80%;
   }
-  #mdContainer.h {
-    height: 75%;
-  }
-  .modalheader {
+  #mdContainer.m {
+    height: 72%;
+}
+  .mdModal .header {
     text-align: center;
-    text-transform: capitalize;
+    border-bottom: 1px solid #9c9c9c94;
   }
+  .mdModal .header h1 {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .mdModal .footer {
+    border-top: 1px solid #9c9c9c94;
+}
 /*Overlay*/
   div#overlay {
     width: 100%;

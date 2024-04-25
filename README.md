@@ -7,11 +7,18 @@ The mdModal library provides a modal functionality that utilizes Markdown to dis
 Special thanks to [Zerodevx](https://github.com/zerodevx) for creating the repository that inspired this project. The original repository, [Zero-md](https://github.com/zerodevx/zero-md), served as a valuable resource in the development of this modal.
 
 ## How to Use
+To use mdModal in your project, you can include it via a CDN or install it using npm:
 
+### CDN
 
-Add the CDN to Your Website :
 ```
-https://cdn.statically.io/gh/itshnawy/mdModal/main/dist/mdModal.min.js
+<script src="https://cdn.jsdelivr.net/npm/mdModal/mdModal.js"></script>
+```
+
+### NPM
+
+```
+npm i mdModal
 ```
 
 
@@ -21,49 +28,56 @@ To utilize mdModal, follow these simple steps:
 2. Incorporate the Markdown file into the function as shown below, specifying the language direction if necessary:
 
 ```javascript
-mdModal('ReadMe.md')
+mdModal.new('ReadMe.md')
 ```
 
-### Customization
+## Customization
 
 Customization features on the modal
 
-#### Dirction
+### language
 
-To change the dirction of the modal, you need to add dir parameter, like this:
 
-> default: LTR
+> default: ar
 
 ```javascript
-mdModal(src = 'ReadMe.md', dir = 'LTR')
+mdModal.currentLanguage = "en" // dir = ltr
 ```
 
-#### Header 
+### Background 
+
+
+> default: #fff
+
+```javascript
+mdModal.currentColor = "#000" // background will be black and it'll use dark mode theme
+```
+
+### Modal Style 
+
+
+> default: mdModal Style file
+
+```javascript
+mdModal.style = "/css/style.css" will replace the design of md modal
+```
+
+### Header 
 
 If you want to add a header to the modal, include the 'header' parameter in the function:
 
 > default: NONE
 
 ```javascript
-mdModal(src = 'ReadMe.md', dir = 'LTR', header ='The Title')
+mdModal.new('ReadMe.md').header("The Header")
 ```
+### Footer 
 
-#### Background 
+If you want to add a footer to the modal, include the 'footer' function like this:
 
-If you want to add a header to the modal, include the 'bg' parameter in the function:
-
-> default: White Color
+> default: NONE
 
 ```javascript
-mdModal(src = 'ReadMe.md', dir = 'LTR', header ='The Title', bg = '#fff')
+mdModal.new('ReadMe.md').footer("the footer")
 ```
 
-#### Font 
-
-If you want to customize markdown font on the modal , include the 'fontSrc' parameter in the function to set the font link and include the 'fontName' parameter in the function to set the font name, example: 
-
-> default: The Default Font Is Tajawal
-
-```javascript
-mdModal(src = 'ReadMe.md', dir = 'LTR', header ='The Title', bg = '#fff', fontSrc = '{FONT-LINK}', fontName = '{FONT-NAME}')
-```
