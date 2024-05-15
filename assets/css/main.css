@@ -1,5 +1,5 @@
 /*Model Container*/
-.mdModal {
+.modal-body {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -26,15 +26,15 @@
   #mdContainer.m {
     height: 72%;
 }
-  .mdModal .header {
+  .modal-body .header {
     text-align: center;
     border-bottom: 1px solid #9c9c9c94;
   }
-  .mdModal .header h1 {
+  .modal-body .header h1 {
     margin: 0;
     margin-bottom: 10px;
   }
-  .mdModal .footer {
+  .modal-body .footer {
     border-top: 1px solid #9c9c9c94;
 }
 .footer.agree > button {
@@ -74,13 +74,13 @@ div#toast {
 }
 /*Media Query*/
 @media (max-width: 576px) {
-  .mdModal {
+  .modal-body {
     max-width: 250px;
   }
 }
 
 @media (min-width: 576px) {
-  .mdModal {
+  .modal-body {
     max-width: 500px;
   }
 }

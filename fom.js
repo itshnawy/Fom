@@ -1,10 +1,10 @@
 import { loadCSS, loadJS, close } from './assets/js/functions.js';
 
-const mdModal = {
+const Fom = {
   currentLanguage: 'ar',
   currentColor: '#ffffff',
   style: "./assets/css/modal.css",
-  new: function(src) {
+  newMD: function(src) {
     // Parameter Validation
     if (typeof src !== 'string' || src.trim() === '') {
       throw new Error('src parameter must be a non-empty string.');
@@ -13,13 +13,14 @@ const mdModal = {
     // Vars
     let p = document.body;
     let ov = document.createElement("div");
-    let modal = document.createElement("div"); modal.id = "modal";
+    let modal = document.createElement("div"); modal.id = "Fom_Modal";
     let BGTL = this.currentColor === "#000" || this.currentColor === "#000000" ? '#ffffff' : '#000000';
     let dir = this.currentLanguage === 'ar' ? "rtl" : "ltr";
     let dOrW = this.currentColor === "#000" || this.currentColor === "#000000" ? './assets/css/md-dark.css' : './assets/css/md.css';
     ov.id = "overlay";
     const modalContainer = document.createElement("div");
-    modalContainer.classList.add("mdModal");
+    modalContainer.classList.add("modal-body");
+    modalContainer.classList.add("md");
     modalContainer.style.backgroundColor = this.currentColor;
 
 
@@ -78,7 +79,7 @@ const mdModal = {
       }
     }
   },
-  agree: function(src, headerText, buttonText) {
+  new: function(content, headerText, buttonText) {
     // Parameter Validation
     if (typeof src !== 'string' || src.trim() === '') {
       throw new Error('src parameter must be a non-empty string.');
@@ -87,13 +88,12 @@ const mdModal = {
     // Vars
     let p = document.body;
     let ov = document.createElement("div");
-    let modal = document.createElement("div"); modal.id = "modal";
+    let modal = document.createElement("div"); modal.id = "Fom_Modal";
     let BGTL = this.currentColor === "#000" || this.currentColor === "#000000" ? '#ffffff' : '#000000';
     let dir = this.currentLanguage === 'ar' ? "rtl" : "ltr";
-    let dOrW = this.currentColor === "#000" || this.currentColor === "#000000" ? './assets/css/md-dark.css' : './assets/css/md.css';
     ov.id = "overlay";
     const modalContainer = document.createElement("div");
-    modalContainer.classList.add("mdModal");
+    modalContainer.classList.add("modal-body");
     modalContainer.style.backgroundColor = this.currentColor;
 
 
@@ -105,12 +105,9 @@ const mdModal = {
     modalContainer.innerHTML = `
                     <button id="close-btn" title="Close Button" style="color:${BGTL}">&times;</button>
                     <div class="header" style="color:${BGTL}"><h1>${headerText}</h1></div>
-                    <zero-md id="mdContainer" src="${src}" dir="${dir}">
-                     <template>
-                      <link rel="stylesheet" href="${dOrW}" />
-                      <link rel="stylesheet" href="./assets/css/hili.css" />
-                     </template>
-                    </zero-md>
+                    <div id="modal-text" dir='${dir}'>
+                    <p>${content}</p>
+                      </div>
                     <div class="footer agree" style="color:${BGTL}"><button id="agreeColse">${buttonText}</button></div>
                     `;
 
@@ -150,10 +147,7 @@ const mdModal = {
     toastContainer.style[position] = (pos === 'top' ? '30px' : '10px');
     document.body.appendChild(toastContainer);
 
-
-
-
   }
 }
 
-export default mdModal;
+export default Fom;
