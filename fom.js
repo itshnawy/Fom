@@ -1,7 +1,7 @@
 import { loadCSS, loadJS, close } from './assets/js/functions.js';
 
 const Fom = {
-  currentLanguage: 'ar',
+  currentLanguage: 'en',
   currentColor: '#ffffff',
   style: "./assets/css/modal.css",
   newMD: function(src) {
