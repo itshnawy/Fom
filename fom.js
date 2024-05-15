@@ -3,7 +3,7 @@ import { loadCSS, loadJS, close } from './assets/js/functions.js';
 const Fom = {
   currentLanguage: 'en',
   currentColor: '#ffffff',
-  style: "./assets/css/modal.css",
+  style: "./assets/css/main.css",
   newMD: function(src) {
     // Parameter Validation
     if (typeof src !== 'string' || src.trim() === '') {
