@@ -1,4 +1,4 @@
-import { loadCSS, loadJS, close } from './assets/js/functions.js';
+import { loadCSS, loadJS, close, firstChild } from './assets/js/functions.js';
 
 const Fom = {
   currentLanguage: 'en',
@@ -153,6 +153,7 @@ const Fom = {
     if (typeof element !== 'string' || element.trim() === '') {
       throw new Error('Element parameter must be a non-empty string.');
     }
+
     let BGTL = this.currentColor === "#000" || this.currentColor === "#000000" ? '#ffffff' : '#000000';
     loadCSS(this.style)
     let hNotify = document.createElement("div");
@@ -161,8 +162,9 @@ const Fom = {
 
     hNotify.innerHTML = `<p style='color: ${BGTL}'>${content}</p>`;
     hNotify.style.background = this.currentColor;
+    let parent = document.querySelector(element);
 
-    document.querySelector(element).append(hNotify);
+    firstChild(parent, hNotify);
   },
   sidebarAlert: function() {
 
