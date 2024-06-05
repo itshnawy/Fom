@@ -147,6 +147,28 @@ const Fom = {
     toastContainer.style[position] = (pos === 'top' ? '30px' : '10px');
     document.body.appendChild(toastContainer);
 
+  },
+  headerNotify: function(element, htmlnotification) {
+    // Parameter Validation
+    if (typeof element !== 'string' || element.trim() === '') {
+      throw new Error('Element parameter must be a non-empty string.');
+    }
+    let BGTL = this.currentColor === "#000" || this.currentColor === "#000000" ? '#ffffff' : '#000000';
+    loadCSS(this.style)
+    let hNotify = document.createElement("div");
+    hNotify.id = "hNotify";
+    let content = htmlnotification;
+
+    hNotify.innerHTML = `<p style='color: ${BGTL}'>${content}</p>`;
+    hNotify.style.background = this.currentColor;
+
+    document.querySelector(element).append(hNotify);
+  },
+  sidebarAlert: function() {
+
+  },
+  fab: function() {
+
   }
 }
 
